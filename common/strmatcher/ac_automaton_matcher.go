@@ -223,7 +223,7 @@ func (ac *ACAutomaton) Match(s string) bool {
 	var fullMatch = true
 	// 1. the match string is all through trie edge. FULL MATCH or DOMAIN
 	// 2. the match string is through a fail edge. NOT FULL MATCH
-	// 2.1 Through a fail edge, but there exists a valid node. SUBSTR
+	// 2.1 Through a fail edge, but there exists a valid node. SUBSTR 
 	for i := len(s) - 1; i >= 0; i-- {
 		var idx = char2Index[s[i]]
 		fullMatch = fullMatch && ac.trie[node][idx].edgeType
